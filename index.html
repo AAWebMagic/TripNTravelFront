@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Trip N Travel - Fullstack App Preview" />
-    <title>Trip N Travel</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <!-- Your full layout starts here. This should be filled with real HTML content from your React app -->
-      <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="A product of Trip N Travel">
+  <title>Trip N Travel</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="min-h-screen bg-white">
+      <nav class="nav-gradient fixed w-full z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">
+            <div class="brand-logo flex items-center gap-3">
+              <img src="logo.png" alt="Trip N Travel Logo" class="logo-image">
+            </div>
+            <div class="hidden md:block">
+              <ul class="flex space-x-6 items-baseline">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <div class="md:hidden">
+              <button class="text-primary focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id="home" class="hero-section h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1586500036065-bdaeac7a4feb');"></div>
+        <div class="relative z-10 text-center text-white max-w-5xl px-4">
           <h1 class="hero-title">Explore the World with Trip N Travel</h1>
           <p class="hero-subtitle">Unforgettable holidays, unbeatable prices</p>
-          <div class="hero-buttons">
+          <div class="flex flex-col sm:flex-row gap-6 justify-center mt-8">
             <a href="#packages" class="btn-primary">View Packages</a>
             <a href="#contact" class="btn-secondary">Send Inquiry</a>
           </div>
@@ -26,89 +52,43 @@
       </section>
 
       <section id="about" class="why-book-section">
-        <h2 class="section-title">Why Book With Us</h2>
-        <div class="features">
-          <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3 class="feature-title">Trusted by Thousands</h3>
-            <p class="feature-description">Over 50,000 happy customers</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <h3 class="feature-title">Handpicked Deals</h3>
-            <p class="feature-description">Curated offers just for you</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📞</div>
-            <h3 class="feature-title">24/7 Support</h3>
-            <p class="feature-description">We’re always here to help</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💰</div>
-            <h3 class="feature-title">Best Price Guarantee</h3>
-            <p class="feature-description">Found cheaper? We’ll match it</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="packages" class="packages-section">
-        <h2 class="section-title text-white">Featured Packages</h2>
-        <div class="packages-grid">
-          <div class="package-card">
-            <img class="package-image" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldives" />
-            <div class="package-content">
-              <h3 class="package-title">Maldives</h3>
-              <p class="package-description">All inclusive beach paradise</p>
-              <p class="package-duration">5 Nights / 6 Days</p>
-              <div class="package-pricing">
-                <span class="package-price">$1,299</span><span class="package-per-person">per person</span>
-              </div>
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="section-title">Why Book With Us</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="feature-card">
+              <div class="feature-icon">👥</div>
+              <h3 class="feature-title">Trusted by Thousands</h3>
+              <p class="feature-description">Over 50,000 satisfied customers trust our travel expertise</p>
             </div>
-          </div>
-
-          <div class="package-card">
-            <img class="package-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Swiss Alps" />
-            <div class="package-content">
-              <h3 class="package-title">Swiss Alps</h3>
-              <p class="package-description">Snowy mountains and scenic views</p>
-              <p class="package-duration">6 Nights / 7 Days</p>
-              <div class="package-pricing">
-                <span class="package-price">$1,799</span><span class="package-per-person">per person</span>
-              </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3 class="feature-title">Handpicked Deals</h3>
+              <p class="feature-description">Carefully selected destinations and accommodations</p>
             </div>
-          </div>
-
-          <div class="package-card">
-            <img class="package-image" src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Tokyo" />
-            <div class="package-content">
-              <h3 class="package-title">Tokyo</h3>
-              <p class="package-description">Vibrant city with culture and tech</p>
-              <p class="package-duration">4 Nights / 5 Days</p>
-              <div class="package-pricing">
-                <span class="package-price">$999</span><span class="package-per-person">per person</span>
-              </div>
+            <div class="feature-card">
+              <div class="feature-icon">📞</div>
+              <h3 class="feature-title">24/7 Support</h3>
+              <p class="feature-description">Round-the-clock customer support for your peace of mind</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💰</div>
+              <h3 class="feature-title">Best Price Guarantee</h3>
+              <p class="feature-description">We match any competitor's price or refund the difference</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="newsletter-section">
-        <h2 class="newsletter-title">Get the Best Holiday Deals in Your Inbox</h2>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" class="newsletter-input" required />
-          <button type="submit" class="newsletter-button">Subscribe</button>
-        </form>
+      <section id="contact" class="footer-section">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <div class="footer-brand">
+            <img src="logo.png" alt="Trip N Travel Logo" class="footer-logo-image">
+            <p class="footer-description">Your trusted partner for unforgettable travel experiences worldwide.</p>
+          </div>
+          <p class="footer-bottom">&copy; 2025 Trip N Travel. All rights reserved.</p>
+        </div>
       </section>
-
-      <footer id="contact" class="footer-section">
-        <div class="footer-brand">
-          <img src="logo.png" alt="Trip N Travel Logo" class="footer-logo-image" />
-          <p class="footer-description">Your trusted partner for unforgettable travel experiences worldwide.</p>
-        </div>
-        <div class="footer-bottom">
-          &copy; 2025 Trip N Travel. All rights reserved.
-        </div>
-      </footer>
     </div>
-  </body>
+  </div>
+</body>
 </html>
